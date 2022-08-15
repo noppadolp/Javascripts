@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Counter!</title>
+    </head>
+    <script>
+        let counter = 0;
+        function count(){
+            counter++;
+            document.querySelector('h1').innerHTML = counter;
+            
+            if(counter % 10 === 0){
+                alert(`Count is now ${counter}`);
+            }
+        }
+    </script>
+    <body>
+        <h1>Counter!</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>

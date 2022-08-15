@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Currency Exchange</title>
+    </head>
+    <script>
+        document.addEventListener('DOMContentLoaded',function (){
+            fetch('https://api.exchangerate.host/lastest?base=USD')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                const rate = data.rates.THB;
+                document.querySelector('body').innerHTML = `1 USD is equal to ${rate} THB. `;
+            });
+        });
+    </script>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Tasks</title>
+    </head>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            document.querySelector('form').onsubmit = function (){
+                const task = document.querySelector('#task').value;
+                const li = document.createElement('li');
+                li.innerHTML = task;
+                document.querySelector('#tasks').append(li);
+                document.querySelector('#task').value ='';
+                //Stop form from submitting
+                return false;
+            }
+        });
+    </script>
+    <body>
+        <h1>Tasks</h1>
+        <ul id="tasks">
+        </ul>
+        <form >
+            <input id="task" type="text" placeholder="New Task">
+            <input type="submit">
+        </form>
+    </body>
+</html>
